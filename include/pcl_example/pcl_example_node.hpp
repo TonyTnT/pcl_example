@@ -56,7 +56,13 @@ class Pcl_Example : public rclcpp::Node
     // ROS2 publisher and related topic name 
     rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr publisher_;
     std::string param_topic_pointcloud_out;
-    
-};
+    std::string pointcloud_qos_type;
+    float x_max;
+    float x_min;
+    float y_max;
+    float y_min;
+    float z_max;
+    float z_min;
+};;
 
 #endif //PCL_EXAMPLE__PCL_EXAMPLE_NODE_HPP_

@@ -21,10 +21,17 @@ def generate_launch_description():
         Node(
             package='pcl_example',
             executable='pcl_example_node',
-            name='pcl_example_node',
+            name='pcl_filter',
             parameters= [
-            {'frame_id': 'lidar'},
-            {'topic_pointcloud_in': 'bf_lidar/point_cloud_out'},
-            {'topic_pointcloud_out': 'bf_lidar/point_cloud_pcl_example'}],
+            {'frame_id': 'femto_mega_color_optical_frame'},
+            {'topic_pointcloud_in': '/femto_mega/depth_registered/points'},
+            {'topic_pointcloud_out': '/femto_mega/depth_registered/pointsx'},
+            {'qos_type': 'best_effort'},
+            {'x_max': 2.0},
+            {'x_min': -2.0},
+            {'y_max': 0.58},
+            {'y_min': -2.0},
+            {'z_max': 3.0},
+            {'z_min': 0.0}],
         )
     ])

@@ -79,4 +79,8 @@ if(BUILD_TESTING)
   add_launch_test(test/pcl_example_launch.testing.py)
 endif()
 
+install(DIRECTORY launch
+    
+DESTINATION share/${PROJECT_NAME})
+
 ament_package()
